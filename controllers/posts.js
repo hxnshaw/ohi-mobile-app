@@ -41,28 +41,7 @@ exports.getPost = async (req, res, next) => {
   }
 };
 
-// exports.createComment = async (req, res, next) => {
-//   try {
-//     const comment = new Comment({
-//       comment: req.body.comment,
-//       name: req.body.name,
-//     });
-//     await comment.save();
-//     await Post.findOneAndUpdate({ _id: req.body._id }, { $push: { comment } });
 
-//     res.status(200).json({
-//       success: true,
-//       data: comment,
-//     });
-//     console.log(comment);
-//   } catch (error) {
-//     res.status(500).json({
-//       success: false,
-//       error: error.message,
-//     });
-//     console.log(error);
-//   }
-// };
 
 exports.createComment = async (req, res, next) => {
   try {
